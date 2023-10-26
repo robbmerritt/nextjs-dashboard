@@ -6,9 +6,11 @@ import Link from 'next/link';
 import { generatePagination } from '@/app/lib/utils';
 
 export default function Pagination({ totalPages }: { totalPages: number }) {
-  const allPages = generatePagination(currentPage, totalPages);
+    const currentPage = 1;
 
-  return (
+  const allPages = generatePagination(currentPage, totalPages);
+return null;
+/*  return (
     <div className="inline-flex">
       <PaginationArrow
         direction="left"
@@ -28,7 +30,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
           return (
             <PaginationNumber
               key={page}
-              href={createPageURL(page)}
+              href={createPageURL(currentPage - 1)}
               page={page}
               position={position}
               isActive={currentPage === page}
@@ -39,11 +41,11 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
 
       <PaginationArrow
         direction="right"
-        href={createPageURL(currentPage + 1)}
+        href={createPageURL(currentPage - 1)}
         isDisabled={currentPage >= totalPages}
       />
     </div>
-  );
+  );*/
 }
 
 function PaginationNumber({

@@ -10,6 +10,8 @@ import { lusitana } from '@/app/ui/fonts';
 
 export default async function RevenueChart() {
   const chartHeight = 350;
+  const revenue: any[] = [];
+
   const { yAxisLabels, topLabel } = generateYAxis(revenue);
 
   if (!revenue || revenue.length === 0) {

@@ -14,6 +14,10 @@ const iconMap = {
 };
 
 export default async function Cards() {
+    const totalPaidInvoices = 0;
+    const totalPendingInvoices = 0;
+    const numberOfInvoices = 0;
+    const numberOfCustomers = 0;
   return (
     <>
       <Card title="Collected" value={totalPaidInvoices} type="collected" />
